@@ -1,13 +1,34 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
-    // This is private, so that we can show an error if its not set up yet
     private static GameManager staticInstance;
-    public int NumberOfPoints;
 
+    public float points = 0;
+    public GameObject gate;
+    [SerializeField] TMP_Text text;
+    //public TextMeshPro textDisplay;
+    private void Start()
+    {
+        // Set the static instance to this instance
+        staticInstance = this;
+        //textDisplay = tmp.GetComponent<TextMeshPro>();
+    }
+
+    private void Update() {
+
+        if(points>=11){
+            gate.SetActive(false);
+            text.text="";
+        }
+        else{
+            
+            text.text = points + "/11";
+        }
+    }
     public static GameManager Instance
     {
         get
@@ -22,13 +43,4 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private void Awake()
-    {
-        // Set the static instance to this instance
-        staticInstance = this;
-    }
-
-    public void AddPoints(int PointsToAdd){
-        NumberOfPoints += PointsToAdd;
-    }
 }
