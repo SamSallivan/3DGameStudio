@@ -54,6 +54,7 @@
      <Compile Include="Assets\ItemPickup.cs" />
      <Compile Include="Assets\text.cs" />
      <Compile Include="Assets\BossTrigger.cs" />
+     <Compile Include="Assets\test.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\Stylized Water For URP\Shaders\Libraries\WaterFoam.hlsl" />

@@ -19,7 +19,8 @@ public class BossTrigger : MonoBehaviour
     void Update()
     {
         if(vordt.activeInHierarchy)
-            vordt.transform.position += new Vector3(Random.Range(-0.15f, 0.15f), Random.Range(-0.1f, 0.1f), Random.Range(-0.15f, 0.15f));
+            vordt.transform.position += new Vector3(Random.Range(-0.2f, 0.2f), Random.Range(-0.15f, 0.15f), Random.Range(-0.2f, 0.2f));
+            vordt.transform.localScale = new Vector3(Random.Range(0.8f, 1.2f), Random.Range(0.8f, 1.2f), Random.Range(0.8f, 1.2f));
         
         
     }
